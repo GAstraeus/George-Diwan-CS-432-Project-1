@@ -78,16 +78,18 @@ public class BST {
                     successor.left = node.left;
                     successor.right = node.right;
                     parent.right = successor;
+                    node = null;
                     //find next successive node and point parent to it
                     // point it to left of node, point it to right of node
                 }
-                if (parent.left == node){
+                 else if (parent.left == node){
                     //node is the one getting deletes
                     //
                     Node successor = getNode(this.root,findNextRec(node.value));
                     successor.left = node.left;
                     successor.right = node.right;
                     parent.left = successor;
+                    node = null;
                     //find next successive node and point parent to it
                     // point it to left of node, point it to right of node
                 }
